@@ -58,7 +58,7 @@ body{
   inset:0;
 
   background:
-    rgba(255,250,245,0.28);
+    rgba(255,250,245,0.26);
 
   z-index:-4;
 }
@@ -262,6 +262,20 @@ body{
 
 .name{
 
+  width:100%;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-top:10px;
+
   opacity:0;
 
   transform:
@@ -285,27 +299,43 @@ body{
 
 .nameText{
 
-  font-size:112px;
+  font-size:96px;
 
-  color:#ff5d8f;
+  line-height:1;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffb6cc 0%,
+      #ff7da8 48%,
+      #ff5f90 100%
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 
   text-shadow:
-    0 6px 0 #fff,
+    0 0 0 #fff,
+    0 6px 0 rgba(255,255,255,0.95),
     0 10px 24px rgba(255,143,176,0.35);
+
+  white-space:nowrap;
 }
 
 /* さんでした */
 
 .san{
 
-  font-size:58px;
+  font-size:52px;
+
+  line-height:1.1;
 
   color:#7c6558;
 
-  margin-left:12px;
-
   text-shadow:
     0 4px 0 #fff;
+
+  white-space:nowrap;
 }
 
 /* プレゼント */
