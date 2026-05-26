@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280,height=720">
+
+<title>ポメラニアン1位発表</title>
+
+<style>
+
+@font-face{
+  font-family:'Panda';
+  src:url('pandabakery.ttf');
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+
+  width:1280px;
+  height:720px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  font-family:'Panda',sans-serif;
+
+  background:#f8e0b9;
+}
+
+/* 背景 */
+
+.bg{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  opacity:0.22;
+
+  z-index:-5;
+}
+
+.overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    rgba(255,250,245,0.28);
+
+  z-index:-4;
+}
+
+/* 外枠 */
+
+.frame{
+
+  position:absolute;
+
+  inset:10px;
+
+  border-radius:32px;
+
+  border:
+    3px dashed #efb9b9;
+
+  background:
+    rgba(255,255,255,0.50);
+
+  z-index:-3;
+}
+
+/* 装飾 */
+
+.star{
+
+  position:absolute;
+
+  font-size:54px;
+
+  opacity:0.42;
+
+  animation:
+    sparkle 2.8s infinite;
+}
+
+.star1{
+  left:110px;
+  top:130px;
+  color:#ffb8c8;
+}
+
+.star2{
+  right:120px;
+  top:160px;
+  color:#ffd56f;
+  animation-delay:1s;
+}
+
+.star3{
+  left:150px;
+  bottom:130px;
+  color:#b8e5c8;
+  animation-delay:2s;
+}
+
+.star4{
+  right:140px;
+  bottom:120px;
+  color:#ffcf9c;
+  animation-delay:1.5s;
+}
+
+@keyframes sparkle{
+
+  0%{
+    transform:scale(0.8);
+    opacity:0.3;
+  }
+
+  50%{
+    transform:scale(1.15);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(0.8);
+    opacity:0.3;
+  }
+}
+
+/* 全体 */
+
+.container{
+
+  width:100%;
+  height:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+}
+
+/* ロゴ */
+
+.logo{
+
+  width:320px;
+
+  margin-bottom:12px;
+
+  filter:
+    drop-shadow(0 6px 16px rgba(255,255,255,0.9));
+}
+
+/* メインカード */
+
+.card{
+
+  width:980px;
+
+  height:440px;
+
+  border-radius:48px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.95),
+      rgba(255,255,255,0.90)
+    );
+
+  border:
+    7px solid #f5c1cb;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 14px 28px rgba(0,0,0,0.08);
+}
+
+/* タイトル */
+
+.title{
+
+  font-size:58px;
+
+  line-height:1.15;
+
+  color:#7c6558;
+
+  text-shadow:
+    0 4px 0 #fff;
+}
+
+/* ポメ */
+
+.pome{
+
+  color:#ff8fb0;
+
+  font-size:88px;
+
+  text-shadow:
+    0 5px 0 #fff,
+    0 10px 20px rgba(255,143,176,0.30);
+}
+
+/* 区切り */
+
+.line{
+
+  width:86%;
+
+  height:4px;
+
+  border-radius:999px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #f6b8c7 0px,
+      #f6b8c7 12px,
+      transparent 12px,
+      transparent 24px
+    );
+
+  margin:
+    20px
+    0;
+}
+
+/* 名前表示 */
+
+.name{
+
+  opacity:0;
+
+  transform:
+    translateY(24px)
+    scale(0.92);
+
+  transition:
+    all 0.9s ease;
+}
+
+.name.show{
+
+  opacity:1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+/* 犬上リオ */
+
+.nameText{
+
+  font-size:112px;
+
+  color:#ff5d8f;
+
+  text-shadow:
+    0 6px 0 #fff,
+    0 10px 24px rgba(255,143,176,0.35);
+}
+
+/* さんでした */
+
+.san{
+
+  font-size:58px;
+
+  color:#7c6558;
+
+  margin-left:12px;
+
+  text-shadow:
+    0 4px 0 #fff;
+}
+
+/* プレゼント */
+
+.present{
+
+  margin-top:18px;
+
+  opacity:0;
+
+  transform:
+    translateY(16px);
+
+  transition:
+    all 0.8s ease;
+}
+
+.present.show{
+
+  opacity:1;
+
+  transform:
+    translateY(0);
+}
+
+.presentText{
+
+  font-size:44px;
+
+  color:#7c6558;
+
+  text-shadow:
+    0 4px 0 #fff;
+}
+
+.presentPink{
+
+  color:#ff5d8f;
+}
+
+/* 下 */
+
+.sub{
+
+  position:absolute;
+
+  bottom:26px;
+
+  font-size:30px;
+
+  color:#9a7b68;
+
+  opacity:0.9;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 背景 -->
+
+<img src="haikei.png" class="bg">
+
+<div class="overlay"></div>
+
+<div class="frame"></div>
+
+<!-- 装飾 -->
+
+<div class="star star1">✦</div>
+<div class="star star2">✦</div>
+<div class="star star3">✦</div>
+<div class="star star4">✦</div>
+
+<!-- メイン -->
+
+<div class="container">
+
+  <!-- ロゴ -->
+
+  <img src="wan_logo.png" class="logo">
+
+  <!-- カード -->
+
+  <div class="card">
+
+    <div class="title">
+
+      <span class="pome">
+        ポメラニアン
+      </span><br>
+
+      に1番投票してくれた<br>
+      お客様は…
+
+    </div>
+
+    <div class="line"></div>
+
+    <!-- 名前 -->
+
+    <div class="name" id="name">
+
+      <span class="nameText">
+        犬上リオ
+      </span>
+
+      <span class="san">
+        さんでした！
+      </span>
+
+    </div>
+
+    <div class="line"></div>
+
+    <!-- プレゼント -->
+
+    <div class="present" id="present">
+
+      <span class="presentText">
+        後日
+      </span>
+
+      <span class="presentText presentPink">
+        特別なプレゼント
+      </span>
+
+      <span class="presentText">
+        を贈呈します！
+      </span>
+
+    </div>
+
+    <!-- 下 -->
+
+    <div class="sub">
+      たくさんのご投票ありがとうございました！
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+/* 名前表示 */
+
+setTimeout(()=>{
+
+  document
+    .getElementById('name')
+    .classList.add('show');
+
+},2200);
+
+/* プレゼント表示 */
+
+setTimeout(()=>{
+
+  document
+    .getElementById('present')
+    .classList.add('show');
+
+},4300);
+
+</script>
+
+</body>
+</html>
