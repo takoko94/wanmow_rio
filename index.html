@@ -46,7 +46,7 @@ body{
 
   object-fit:cover;
 
-  opacity:0.16;
+  opacity:0.14;
 
   z-index:-5;
 }
@@ -77,62 +77,32 @@ body{
     3px dashed #ef9eb5;
 }
 
-/* 肉球 */
-
-.paw{
-
-  position:absolute;
-
-  opacity:0.9;
-}
-
-.paw1{
-  left:58px;
-  top:90px;
-  font-size:70px;
-  color:#ff96b3;
-}
-
-.paw2{
-  right:70px;
-  top:300px;
-  font-size:72px;
-  color:#f5bf59;
-}
-
-.paw3{
-  left:55px;
-  bottom:90px;
-  font-size:74px;
-  color:#86d9ba;
-}
-
 /* キラキラ */
 
 .star{
 
   position:absolute;
 
-  font-size:42px;
+  font-size:34px;
 
-  opacity:0.9;
+  opacity:0.65;
 }
 
 .star1{
-  left:270px;
-  top:120px;
+  left:180px;
+  top:140px;
   color:#ffd863;
 }
 
 .star2{
-  right:220px;
-  top:140px;
+  right:200px;
+  top:170px;
   color:#ff9fbc;
 }
 
 .star3{
-  right:170px;
-  bottom:110px;
+  right:240px;
+  bottom:150px;
   color:#8ddfcf;
 }
 
@@ -149,7 +119,7 @@ body{
 
   align-items:center;
 
-  padding-top:20px;
+  padding-top:24px;
 }
 
 /* ロゴ */
@@ -158,28 +128,24 @@ body{
 
   width:320px;
 
-  margin-bottom:14px;
+  margin-bottom:18px;
 
   filter:
-    drop-shadow(0 6px 12px rgba(255,255,255,0.95));
+    drop-shadow(0 5px 10px rgba(255,255,255,0.95));
 }
 
 /* カード */
 
 .card{
 
-  width:1080px;
+  width:1040px;
 
-  height:520px;
+  height:500px;
 
   background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.97),
-      rgba(255,255,255,0.93)
-    );
+    rgba(255,255,255,0.92);
 
-  border-radius:44px;
+  border-radius:42px;
 
   border:
     6px solid #f3a8bb;
@@ -194,10 +160,10 @@ body{
 
   align-items:center;
 
-  padding-top:28px;
+  padding-top:34px;
 
   box-shadow:
-    0 10px 28px rgba(0,0,0,0.08);
+    0 10px 24px rgba(0,0,0,0.08);
 }
 
 /* タイトル */
@@ -206,54 +172,44 @@ body{
 
   text-align:center;
 
-  line-height:1.16;
+  line-height:1.15;
 
   color:#6f5447;
 
-  font-size:54px;
+  font-size:52px;
 
   text-shadow:
-    0 4px 0 #fff;
+    0 3px 0 #fff;
 }
 
-/* ポメ */
+/* ポメラニアン */
 
 .pome{
 
   display:block;
 
-  font-size:92px;
+  font-size:82px;
 
-  margin-bottom:4px;
+  margin-bottom:8px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffb4c9 0%,
-      #ff739c 48%,
-      #ff4f86 100%
-    );
+  color:#ff6f97;
 
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  filter:
-    drop-shadow(0 0 2px #fff)
-    drop-shadow(0 4px 0 rgba(255,255,255,0.95));
+  text-shadow:
+    0 4px 0 rgba(255,255,255,0.95),
+    0 8px 18px rgba(255,120,160,0.18);
 }
 
-/* 区切り */
+/* 線 */
 
 .line{
 
-  width:86%;
+  width:84%;
 
-  height:4px;
+  height:3px;
 
   margin:
-    22px
-    0
-    20px;
+    24px
+    0;
 
   border-radius:999px;
 
@@ -265,27 +221,6 @@ body{
       transparent 12px,
       transparent 24px
     );
-
-  position:relative;
-}
-
-.line::after{
-
-  content:'🐾';
-
-  position:absolute;
-
-  left:50%;
-  top:50%;
-
-  transform:
-    translate(-50%,-50%);
-
-  font-size:22px;
-
-  background:white;
-
-  padding:0 10px;
 }
 
 /* 名前 */
@@ -298,14 +233,12 @@ body{
 
   justify-content:center;
 
-  flex-wrap:nowrap;
-
   width:100%;
 
   opacity:0;
 
   transform:
-    translateY(20px);
+    translateY(16px);
 
   transition:
     all 0.8s ease;
@@ -323,25 +256,15 @@ body{
 
 .nameText{
 
-  font-size:118px;
+  font-size:102px;
 
   line-height:1;
 
-  background:
-    linear-gradient(
-      180deg,
-      #ffb8ca 0%,
-      #ff739c 45%,
-      #ff4f86 100%
-    );
+  color:#ff5f88;
 
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  filter:
-    drop-shadow(0 0 2px #fff)
-    drop-shadow(0 5px 0 rgba(255,255,255,0.92))
-    drop-shadow(0 10px 20px rgba(255,105,150,0.24));
+  text-shadow:
+    0 4px 0 rgba(255,255,255,0.95),
+    0 8px 18px rgba(255,105,150,0.18);
 
   white-space:nowrap;
 }
@@ -350,18 +273,18 @@ body{
 
 .san{
 
-  font-size:58px;
+  font-size:54px;
 
   line-height:1.1;
 
-  margin-left:-2px;
+  margin-left:0px;
 
-  margin-bottom:12px;
+  margin-bottom:10px;
 
   color:#6f5447;
 
   text-shadow:
-    0 4px 0 #fff;
+    0 3px 0 #fff;
 
   white-space:nowrap;
 }
@@ -370,12 +293,12 @@ body{
 
 .present{
 
-  margin-top:26px;
+  margin-top:12px;
 
   opacity:0;
 
   transform:
-    translateY(16px);
+    translateY(12px);
 
   transition:
     all 0.8s ease;
@@ -391,56 +314,36 @@ body{
 
 .presentText{
 
-  font-size:50px;
+  font-size:44px;
 
   color:#6f5447;
 
   text-shadow:
-    0 4px 0 #fff;
+    0 3px 0 #fff;
 }
 
 .presentPink{
 
-  color:#ff5d8f;
+  color:#ff5f88;
 }
 
-/* 下帯 */
+/* 下 */
 
 .footer{
 
   position:absolute;
 
-  bottom:18px;
+  bottom:20px;
 
   left:50%;
 
   transform:translateX(-50%);
 
-  width:640px;
+  font-size:28px;
 
-  height:58px;
+  color:#9a7b68;
 
-  border-radius:999px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #ff9fba,
-      #ff7fa6
-    );
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  color:white;
-
-  font-size:34px;
-
-  box-shadow:
-    0 6px 14px rgba(255,120,160,0.22);
+  opacity:0.9;
 }
 
 </style>
@@ -453,10 +356,6 @@ body{
 <div class="overlay"></div>
 
 <div class="frame"></div>
-
-<div class="paw paw1">🐾</div>
-<div class="paw paw2">🐾</div>
-<div class="paw paw3">🐾</div>
 
 <div class="star star1">✦</div>
 <div class="star star2">✦</div>
@@ -491,7 +390,9 @@ body{
 
       <span class="nameText">
         犬上リオ
-      </span><span class="san">
+      </span>
+
+      <span class="san">
         さんでした！
       </span>
 
@@ -517,10 +418,10 @@ body{
 
     </div>
 
-    <!-- 下帯 -->
+    <!-- 下 -->
 
     <div class="footer">
-      🐾 たくさんのご投票ありがとうございました！ 🐾
+      たくさんのご投票ありがとうございました！
     </div>
 
   </div>
