@@ -46,7 +46,7 @@ body{
 
   object-fit:cover;
 
-  opacity:0.18;
+  opacity:0.16;
 
   z-index:-5;
 }
@@ -83,7 +83,7 @@ body{
 
   position:absolute;
 
-  opacity:0.85;
+  opacity:0.9;
 }
 
 .paw1{
@@ -95,7 +95,7 @@ body{
 
 .paw2{
   right:70px;
-  top:290px;
+  top:300px;
   font-size:72px;
   color:#f5bf59;
 }
@@ -119,7 +119,7 @@ body{
 }
 
 .star1{
-  left:260px;
+  left:270px;
   top:120px;
   color:#ffd863;
 }
@@ -149,16 +149,16 @@ body{
 
   align-items:center;
 
-  padding-top:22px;
+  padding-top:20px;
 }
 
 /* ロゴ */
 
 .logo{
 
-  width:330px;
+  width:320px;
 
-  margin-bottom:16px;
+  margin-bottom:14px;
 
   filter:
     drop-shadow(0 6px 12px rgba(255,255,255,0.95));
@@ -206,7 +206,7 @@ body{
 
   text-align:center;
 
-  line-height:1.18;
+  line-height:1.16;
 
   color:#6f5447;
 
@@ -224,14 +224,14 @@ body{
 
   font-size:92px;
 
-  margin-bottom:6px;
+  margin-bottom:4px;
 
   background:
     linear-gradient(
       180deg,
-      #ffb3c7 0%,
-      #ff6b97 52%,
-      #ff4d84 100%
+      #ffb4c9 0%,
+      #ff739c 48%,
+      #ff4f86 100%
     );
 
   -webkit-background-clip:text;
@@ -239,10 +239,10 @@ body{
 
   filter:
     drop-shadow(0 0 2px #fff)
-    drop-shadow(0 4px 0 rgba(255,255,255,0.9));
+    drop-shadow(0 4px 0 rgba(255,255,255,0.95));
 }
 
-/* 線 */
+/* 区切り */
 
 .line{
 
@@ -251,7 +251,7 @@ body{
   height:4px;
 
   margin:
-    26px
+    22px
     0
     20px;
 
@@ -281,11 +281,11 @@ body{
   transform:
     translate(-50%,-50%);
 
-  font-size:24px;
+  font-size:22px;
 
   background:white;
 
-  padding:0 12px;
+  padding:0 10px;
 }
 
 /* 名前 */
@@ -298,17 +298,14 @@ body{
 
   justify-content:center;
 
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 
   width:100%;
-
-  gap:0px;
 
   opacity:0;
 
   transform:
-    translateY(20px)
-    scale(0.95);
+    translateY(20px);
 
   transition:
     all 0.8s ease;
@@ -319,8 +316,7 @@ body{
   opacity:1;
 
   transform:
-    translateY(0)
-    scale(1);
+    translateY(0);
 }
 
 /* 犬上リオ */
@@ -335,7 +331,7 @@ body{
     linear-gradient(
       180deg,
       #ffb8ca 0%,
-      #ff6f99 48%,
+      #ff739c 45%,
       #ff4f86 100%
     );
 
@@ -344,8 +340,8 @@ body{
 
   filter:
     drop-shadow(0 0 2px #fff)
-    drop-shadow(0 6px 0 rgba(255,255,255,0.92))
-    drop-shadow(0 10px 20px rgba(255,105,150,0.25));
+    drop-shadow(0 5px 0 rgba(255,255,255,0.92))
+    drop-shadow(0 10px 20px rgba(255,105,150,0.24));
 
   white-space:nowrap;
 }
@@ -354,30 +350,32 @@ body{
 
 .san{
 
-  font-size:60px;
+  font-size:58px;
 
-  line-height:1.2;
+  line-height:1.1;
 
-  margin-left:-4px;
+  margin-left:-2px;
 
-  margin-bottom:10px;
+  margin-bottom:12px;
 
   color:#6f5447;
 
   text-shadow:
     0 4px 0 #fff;
+
+  white-space:nowrap;
 }
 
 /* プレゼント */
 
 .present{
 
-  margin-top:30px;
+  margin-top:26px;
 
   opacity:0;
 
   transform:
-    translateY(18px);
+    translateY(16px);
 
   transition:
     all 0.8s ease;
@@ -393,7 +391,7 @@ body{
 
 .presentText{
 
-  font-size:52px;
+  font-size:50px;
 
   color:#6f5447;
 
@@ -412,13 +410,13 @@ body{
 
   position:absolute;
 
-  bottom:16px;
+  bottom:18px;
 
   left:50%;
 
   transform:translateX(-50%);
 
-  width:620px;
+  width:640px;
 
   height:58px;
 
@@ -442,7 +440,7 @@ body{
   font-size:34px;
 
   box-shadow:
-    0 6px 14px rgba(255,120,160,0.25);
+    0 6px 14px rgba(255,120,160,0.22);
 }
 
 </style>
@@ -493,9 +491,7 @@ body{
 
       <span class="nameText">
         犬上リオ
-      </span>
-
-      <span class="san">
+      </span><span class="san">
         さんでした！
       </span>
 
